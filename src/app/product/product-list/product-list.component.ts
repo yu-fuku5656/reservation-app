@@ -21,7 +21,6 @@ export class ProductListComponent implements OnInit {
     productsObservable.subscribe(
       (data) => {
         this.products = data.foundProducts
-        console.log('取得したデータ: ', data.foundProducts);
       },
       (err) => {
         console.log('次のエラーが発生しました: ' + err);
