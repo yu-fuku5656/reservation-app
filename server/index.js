@@ -2,8 +2,15 @@ const express = require('express')
 const mongoose = require('mongoose')
 const config = require('./config/dev')
 const {FakeDb} = require('./fake-db');
+const cors = require('cors'); 
 
 const productRoutes = require('./routes/Products')
+
+
+const app = express();
+app.use(cors({
+    origin: 'http://localhost:4200'  // 許可するオリジンを指定
+}));
 
 
 // MongoDBの接続URI
@@ -22,7 +29,7 @@ mongoose.connect(uri, {
         console.error('MongoDB接続エラー:', err);
 });
 
-const app = express();
+// const app = express();
 
 app.use('/api/v1/products', productRoutes)
 

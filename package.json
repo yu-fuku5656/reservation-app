@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
+    "start-dev": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +22,7 @@
     "@angular/router": "~11.1.2",
     "bootstrap": "^4.6.2",
     "bson": "^4.7.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongodb": "^3.7.4",
     "mongoose": "^8.6.1",

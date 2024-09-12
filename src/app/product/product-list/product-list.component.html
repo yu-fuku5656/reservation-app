@@ -2,9 +2,9 @@
     <div class="myclass">こんにちは</div>
     <div class="row">
         <div *ngFor="let product of products let productId = index" class="col">
-            <a [routerLink]="[productId]">
+            <a [routerLink]="[product._id]">
                 <div class="card">
-                    <img src="{{product.converImage}}" class="card-img-top" alt="...">
+                    <img src="./assets/img/500x500.svg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{product.name}}</h5>
                         <p class="card-text">{{product.description}}</p>
@@ -15,6 +15,3 @@
 
     </div>
 </div>
-
-
-
